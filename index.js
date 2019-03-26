@@ -1,14 +1,9 @@
-let s = '##-####-#';
-let d = '';
-const a = () => Math.floor(Math.random() * 10);
-
-for (let i = 0; i < s.length; i++) {
-  if (s[i] === '-') {
-    d += '-'
-  } 
-  else {
-    d += a()
-  }
+function uuid (reg, base) {
+    return reg.replace(/[x]/g, function(a) {
+    	return a = (Math.random()*base|0).toString(base);
+	})
 }
 
-// 76-9868-9
+
+uuid('xxx-xx', 16);
+// 4de-da
